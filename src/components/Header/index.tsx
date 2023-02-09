@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import {
   Container,
   ContainerInfo,
+  TitleInfo,
   ContainerButtons,
   ContainerPage,
   ContainerImage,
@@ -14,9 +15,9 @@ export function Header() {
   return (
     <Container>
       <ContainerInfo>
-        <Title>Car Rental</Title>
+        <TitleInfo>Car Rental</TitleInfo>
         <Image src={logo} alt="logo" />
-        <Title>Car Rental</Title>
+        <TitleInfo>Car Rental</TitleInfo>
       </ContainerInfo>
       <ContainerButtons>
         <ContainerImage>
