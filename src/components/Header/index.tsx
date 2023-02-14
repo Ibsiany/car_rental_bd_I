@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import {
   Container,
   ContainerInfo,
-  TitleInfo,
+  TitleInfoContainer,
+  Contact,
+  ContactInfo,
   ContainerButtons,
   ContainerPage,
   ContainerImage,
@@ -15,9 +17,15 @@ export function Header() {
   return (
     <Container>
       <ContainerInfo>
-        <TitleInfo>Car Rental</TitleInfo>
+        <TitleInfoContainer>
+          <Contact>Telefone</Contact>
+          <ContactInfo>Car Rental</ContactInfo>
+        </TitleInfoContainer>
         <Image src={logo} alt="logo" />
-        <TitleInfo>Car Rental</TitleInfo>
+        <TitleInfoContainer>
+          <Contact>Contato</Contact>
+          <ContactInfo>Car Rental</ContactInfo>
+        </TitleInfoContainer>
       </ContainerInfo>
       <ContainerButtons>
         <ContainerImage>

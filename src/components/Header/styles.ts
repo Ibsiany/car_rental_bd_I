@@ -17,7 +17,10 @@ export const Container = styled.div`
 export const ContainerInfo = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
+
+  gap: 3rem;
 
   height: 5rem;
   width: 100vw;
@@ -28,16 +31,30 @@ export const ContainerInfo = styled.div`
   background-color: #1c1c1c;
 `;
 
-export const TitleInfo = styled.span`
-  font-size: 1rem;
-  font-weight: bold;
+export const TitleInfoContainer = styled.div``;
+
+export const Contact = styled.span`
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #ff4d00;
+`;
+
+export const ContactInfo = styled.span`
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
   color: #ffffff;
-
-  text-decoration: none;
-
-  :hover {
-    text-decoration: underline;
-  }
 `;
 
 export const ContainerButtons = styled.div`

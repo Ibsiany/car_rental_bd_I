@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const ContainerBanner = styled.div`
   width: 100vw;
-  height: 36.689rem;
+  height: 100%;
 
   display: flex;
   align-items: end;
