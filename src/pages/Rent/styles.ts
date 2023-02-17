@@ -98,10 +98,28 @@ export const Details = styled.span`
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
-  /* identical to box height */
 
   display: flex;
   align-items: center;
 
   color: #333333;
+`;
+
+export const Button = styled.button`
+  width: 5.375rem;
+  height: 1.5rem;
+
+  margin-top: 0.5rem;
+
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.938rem;
+  line-height: 1.125rem;
+
+  border: 1px solid #000000;
+
+  background-color: transparent;
+
+  color: #000000;
 `;

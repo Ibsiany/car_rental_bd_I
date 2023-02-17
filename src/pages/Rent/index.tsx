@@ -15,6 +15,7 @@ import {
   ContainerText,
   ContainerCarInfo,
   Details,
+  Button,
 } from './styles';
 import logo from '../../assets/logo.png';
 
@@ -40,6 +41,8 @@ export function Rent() {
                 <Details>3.0l Twin Turbo</Details>
                 <Details>3.0 L</Details>
                 <Details>Cinza</Details>
+
+                <Button>ALUGAR</Button>
               </ContainerText>
             </ContainerCarInfo>
           </ContainerCar>
@@ -54,6 +57,8 @@ export function Rent() {
                 <Details>3.0l Twin Turbo</Details>
                 <Details>3.0 L</Details>
                 <Details>Cinza</Details>
+
+                <Button>ALUGAR</Button>
               </ContainerText>
             </ContainerCarInfo>
           </ContainerCar>
