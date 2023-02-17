@@ -33,10 +33,10 @@ export function Header() {
           <Image src={logo} alt="logo" />
         </ContainerImage>
         <ContainerPage>
-          <Link to="/auth/dashboard" id="dashboard">
+          <Link to="/rent" id="rent">
             ALUGAR
           </Link>
-          <Link to="/auth/bets-play" id="play">
+          <Link to="/give-back" id="give-back">
             DEVOLVER
           </Link>
         </ContainerPage>

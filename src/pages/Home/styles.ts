@@ -52,17 +52,3 @@ export const Title = styled.span`
 
   color: #ffffff;
 `;
-
-export const ContainerBack = styled.div`
-  a {
-    text-decoration: underline;
-    border: none;
-    background: transparent;
-
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-
-    color: #0000ff;
-  }
-`;
