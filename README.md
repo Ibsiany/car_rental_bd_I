@@ -4,8 +4,8 @@
 
 **Necessário já ter instalado na máquina node, npm e/ou yarn**
 
-- npm install ou yarn
-- npm start ou yarn start
+- rode: npm install ou yarn
+- rode: npm start ou yarn start
 
 ### `Acesso ao protótipo`
 
