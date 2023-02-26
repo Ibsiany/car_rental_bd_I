@@ -28,10 +28,12 @@ export function Header() {
         </TitleInfoContainer>
       </ContainerInfo>
       <ContainerButtons>
-        <ContainerImage>
-          <Title>Car Rental</Title>
-          <Image src={logo} alt="logo" />
-        </ContainerImage>
+        <Link to="/" id="home">
+          <ContainerImage>
+            <Title>Car Rental</Title>
+            <Image src={logo} alt="logo" />
+          </ContainerImage>
+        </Link>
         <ContainerPage>
           <Link to="/rent" id="rent">
             ALUGAR

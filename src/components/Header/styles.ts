@@ -69,6 +69,10 @@ export const ContainerButtons = styled.div`
   right: 0;
 
   background-color: #f7f7f7;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const ContainerPage = styled.div`
@@ -100,7 +104,7 @@ export const ContainerImage = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 30%;
+  width: 100%;
 
   height: 4rem;
 `;
