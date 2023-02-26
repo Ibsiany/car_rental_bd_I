@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Car Rental
 
 ### `Para iniciar o projeto é necessário seguir os seguintes passos:`
 
