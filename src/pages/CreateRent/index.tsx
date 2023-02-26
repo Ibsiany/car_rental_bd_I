@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import {
   Container,
   ContainerInfo,
-  ContainerTitle,
   Title,
-  Info,
   ContainerCars,
   ContainerCar,
   ContainerImage,
@@ -16,19 +13,19 @@ import {
   ContainerText,
   ContainerCarInfo,
   Details,
+  ContainerInput,
+  Label,
+  Input,
+  ContainerButton,
+  Button,
 } from './styles';
 import logo from '../../assets/logo.png';
 
-export function Rent() {
+export function CreateRent() {
   return (
     <Container>
       <Header />
       <ContainerInfo>
-        <ContainerTitle>
-          <Title>Aluguel de carros</Title>
-          <Info>Conheça os carros disponíveis!</Info>
-        </ContainerTitle>
-
         <ContainerCars>
           <ContainerCar>
             <Title>Porsche 911 Carrera 4s</Title>
@@ -41,32 +38,37 @@ export function Rent() {
                 <Details>3.0l Twin Turbo</Details>
                 <Details>3.0 L</Details>
                 <Details className="last">Cinza</Details>
-
-                <Link to="/rent/create" id="rent-create">
-                  ALUGAR
-                </Link>
-              </ContainerText>
-            </ContainerCarInfo>
-          </ContainerCar>
-          <ContainerCar>
-            <Title>Porsche 911 Carrera 4s</Title>
-            <ContainerCarInfo>
-              <ContainerImage>
-                <Image src={logo} alt="logo" />
-              </ContainerImage>
-              <ContainerText>
-                <Details>Coupe</Details>
-                <Details>3.0l Twin Turbo</Details>
-                <Details>3.0 L</Details>
-                <Details className="last">Cinza</Details>
-
-                <Link to="/rent/create" id="rent-create">
-                  ALUGAR
-                </Link>
               </ContainerText>
             </ContainerCarInfo>
           </ContainerCar>
         </ContainerCars>
+
+        <ContainerInput>
+          <Label>
+            CPF:
+            <Input type="number" placeholder="Ex: 13785091000160" />
+          </Label>
+        </ContainerInput>
+
+        <Title>Realizar cadastro de usuário</Title>
+        <ContainerInput>
+          <Label>
+            NOME:
+            <Input type="text" />
+          </Label>
+          <Label>
+            E-MAIL:
+            <Input type="text" placeholder="Ex: alguem@email.com" />
+          </Label>
+          <Label>
+            CELULAR:
+            <Input type="number" placeholder="Ex: 31987158055" />
+          </Label>
+        </ContainerInput>
+
+        <ContainerButton>
+          <Button>ALUGAR</Button>
+        </ContainerButton>
       </ContainerInfo>
       <Footer />
     </Container>
