@@ -2,7 +2,7 @@
 
 ### `Para iniciar o projeto é necessário seguir os seguintes passos:`
 
-**É necessário já ter instalado na máquina node, npm e/ou yarn**
+**Necessário já ter instalado na máquina node, npm e/ou yarn**
 
 - npm install ou yarn
 - npm start ou yarn start
