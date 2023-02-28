@@ -50,22 +50,6 @@ export function CreateRent() {
           </Label>
         </ContainerInput>
 
-        <Title>Realizar cadastro de usuário</Title>
-        <ContainerInput>
-          <Label>
-            NOME:
-            <Input type="text" />
-          </Label>
-          <Label>
-            E-MAIL:
-            <Input type="text" placeholder="Ex: alguem@email.com" />
-          </Label>
-          <Label>
-            CELULAR:
-            <Input type="number" placeholder="Ex: 31987158055" />
-          </Label>
-        </ContainerInput>
-
         <ContainerButton>
           <Button>ALUGAR</Button>
         </ContainerButton>

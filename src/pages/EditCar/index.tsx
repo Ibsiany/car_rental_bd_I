@@ -13,13 +13,13 @@ import {
   Button,
 } from './styles';
 
-export function CreateCar() {
+export function EditCar() {
   return (
     <Container>
       <Header />
       {localStorage.getItem('status') === 'true' ? (
         <ContainerInfo>
-          <Title>Realizar cadastro de carro</Title>
+          <Title>Realizar cadastro</Title>
           <ContainerInput>
             <Label>
               MODELO:
@@ -36,7 +36,7 @@ export function CreateCar() {
           </ContainerInput>
 
           <ContainerButton>
-            <Button>CADASTRAR</Button>
+            <Button>ATUALIZAR</Button>
           </ContainerButton>
         </ContainerInfo>
       ) : (

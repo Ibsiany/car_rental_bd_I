@@ -13,25 +13,25 @@ import {
   Button,
 } from './styles';
 
-export function CreateCar() {
+export function CreateUser() {
   return (
     <Container>
       <Header />
       {localStorage.getItem('status') === 'true' ? (
         <ContainerInfo>
-          <Title>Realizar cadastro de carro</Title>
+          <Title>Realizar cadastro de usuário</Title>
           <ContainerInput>
             <Label>
-              MODELO:
-              <Input type="text" placeholder="Ex: 1. 1 - Gol, da Volkswagen" />
+              NOME:
+              <Input type="text" />
             </Label>
             <Label>
-              PLACA:
-              <Input type="text" placeholder="Ex: UFOPA22" />
+              E-MAIL:
+              <Input type="text" placeholder="Ex: alguem@email.com" />
             </Label>
             <Label>
-              INFORMAÇÕES:
-              <Input type="text" placeholder="Ex: Possui 4 portas..." />
+              CELULAR:
+              <Input type="number" placeholder="Ex: 31987158055" />
             </Label>
           </ContainerInput>
 
