@@ -48,6 +48,10 @@ export function CreateRent() {
             CPF:
             <Input type="number" placeholder="Ex: 13785091000160" />
           </Label>
+          <Label>
+            Data de devolução:
+            <Input type="date" />
+          </Label>
         </ContainerInput>
 
         <ContainerButton>

@@ -105,8 +105,7 @@ export const ContainerInput = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-left: 1rem;
-  flex-direction: column;
+  flex-direction: row;
 
   gap: 2rem;
 `;
@@ -115,8 +114,8 @@ export const Label = styled.label`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 
-  width: 38.5rem;
   font-family: 'Merriweather', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -126,7 +125,6 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 30rem;
   padding: 0.2rem;
 
   ::-webkit-inner-spin-button,
