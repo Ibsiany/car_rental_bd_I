@@ -43,7 +43,7 @@ export function EditUser() {
 
       navigate('/admin/list');
     } catch (error) {
-      toast.error('Ocorreu algum erro na criação do usuário!');
+      toast.error('Ocorreu algum erro na edição do usuário!');
     }
   }, [user, navigate]);
 

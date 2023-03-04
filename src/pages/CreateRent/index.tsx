@@ -33,7 +33,7 @@ export function CreateRent() {
         data,
       });
 
-      toast.error('O carro alugado com sucesso!');
+      toast.success('Carro alugado com sucesso!');
     } catch (error) {
       toast.error('Ocorreu algum erro ao alugar o carro!');
     }

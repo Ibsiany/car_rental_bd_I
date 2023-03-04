@@ -43,7 +43,7 @@ export function EditCar() {
 
       navigate('/admin/list');
     } catch (error) {
-      toast.error('Ocorreu algum erro na criação do usuário!');
+      toast.error('Ocorreu algum erro na edição do carro!');
     }
   }, [car, navigate]);
 
