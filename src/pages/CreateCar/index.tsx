@@ -15,19 +15,10 @@ import {
   ContainerButton,
   Button,
 } from './styles';
-
-interface ICar {
-  name: string;
-  model: string;
-  plate: string;
-  description: string;
-  fuel: string;
-  motor: string;
-  power: string;
-}
+import { ICarDTO } from '../../interfaces/ICarDTO';
 
 export function CreateCar() {
-  const [car, setCar] = useState<ICar>({} as ICar);
+  const [car, setCar] = useState<ICarDTO>({} as ICarDTO);
 
   const navigate = useNavigate();
 

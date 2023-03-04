@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback, useState, ChangeEvent } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
@@ -11,25 +12,64 @@ import {
   ContainerButton,
   Button,
 } from './styles';
+import { IGiveBackDTO } from '../../interfaces/IGiveBackDTO';
+import { api } from '../../services/api';
 
 export function GiveBack() {
+  const [data, setData] = useState<IGiveBackDTO>({} as IGiveBackDTO);
+
+  const giveBack = useCallback(async () => {
+    try {
+      await api.post('/car/give-back', {
+        data,
+      });
+
+      toast.error('O carro foi devolvido com sucesso!');
+    } catch (error) {
+      toast.error('Ocorreu algum erro na criação do usuário!');
+    }
+  }, [data]);
+
+  const handleInputChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = event.target;
+
+      setData({ ...data, [name]: value });
+    },
+    [data, setData],
+  );
+
   return (
     <Container>
+      <Toaster position="top-right" reverseOrder={false} />
+
       <Header />
       <ContainerInfo>
         <ContainerInput>
           <Label>
             CPF:
-            <Input type="number" placeholder="Ex: 13785091000160" />
+            <Input
+              id="cpf"
+              name="cpf"
+              type="number"
+              onChange={handleInputChange}
+              placeholder="Ex: 13785091000160"
+            />
           </Label>
           <Label>
             PLACA:
-            <Input type="text" placeholder="Ex: UFOPA22" />
+            <Input
+              id="plate"
+              name="plate"
+              type="text"
+              onChange={handleInputChange}
+              placeholder="Ex: UFOPA22"
+            />
           </Label>
         </ContainerInput>
 
         <ContainerButton>
-          <Button>DEVOLVER</Button>
+          <Button onClick={giveBack}>DEVOLVER</Button>
         </ContainerButton>
       </ContainerInfo>
       <Footer />
