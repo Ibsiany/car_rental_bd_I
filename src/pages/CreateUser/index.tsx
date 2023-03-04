@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useCallback, ChangeEvent, useState } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import {
@@ -12,10 +14,39 @@ import {
   ContainerButton,
   Button,
 } from './styles';
+import { api } from '../../services/api';
+import { IUserDTO } from '../../interfaces/IUserDTO';
 
 export function CreateUser() {
+  const [user, setUser] = useState<IUserDTO>({} as IUserDTO);
+
+  const navigate = useNavigate();
+
+  const createUser = useCallback(async () => {
+    try {
+      await api.post('/user/create', {
+        user,
+      });
+
+      navigate('/admin/list');
+    } catch (error) {
+      toast.error('Ocorreu algum erro na criação do usuário!');
+    }
+  }, [user, navigate]);
+
+  const handleInputChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = event.target;
+
+      setUser({ ...user, [name]: value });
+    },
+    [user, setUser],
+  );
+
   return (
     <Container>
+      <Toaster position="top-right" reverseOrder={false} />
+
       <Header />
       {localStorage.getItem('status') === 'true' ? (
         <ContainerInfo>
@@ -23,20 +54,37 @@ export function CreateUser() {
           <ContainerInput>
             <Label>
               NOME:
-              <Input type="text" />
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>
               E-MAIL:
-              <Input type="text" placeholder="Ex: alguem@email.com" />
+              <Input
+                id="email"
+                name="email"
+                type="text"
+                onChange={handleInputChange}
+                placeholder="Ex: alguem@email.com"
+              />
             </Label>
             <Label>
-              CELULAR:
-              <Input type="number" placeholder="Ex: 31987158055" />
+              CPF:
+              <Input
+                id="cpf"
+                name="cpf"
+                type="number"
+                onChange={handleInputChange}
+                placeholder="Ex: 13785091000160"
+              />
             </Label>
           </ContainerInput>
 
           <ContainerButton>
-            <Button>CADASTRAR</Button>
+            <Button onClick={createUser}>CADASTRAR</Button>
           </ContainerButton>
         </ContainerInfo>
       ) : (

@@ -75,6 +75,20 @@ export const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
 
+  a {
+    padding: 6px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   button:last-child {
     margin-left: 8px;
     background-color: #d11507;

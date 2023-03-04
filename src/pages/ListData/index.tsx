@@ -60,7 +60,9 @@ export function ListData() {
                   <td>Ibsiany</td>
                   <td>11122233345</td>
                   <td>
-                    <Button type="button">Editar</Button>
+                    <Link to="/admin/edit-user" state="1" id="rent">
+                      Editar
+                    </Link>
                     <Button type="button">Excluir</Button>
                   </td>
                 </tr>
@@ -83,7 +85,9 @@ export function ListData() {
                   <td>1.0</td>
                   <td>UFOP022</td>
                   <td>
-                    <Button type="button">Editar</Button>
+                    <Link to="/admin/edit-car" state="1" id="rent">
+                      Editar
+                    </Link>
                     <Button type="button">Excluir</Button>
                   </td>
                 </tr>
