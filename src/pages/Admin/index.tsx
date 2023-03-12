@@ -43,13 +43,14 @@ export function Admin() {
 
   const verify = useCallback(async () => {
     try {
-      const getUser: IAdminVerifyDTO = await api.post('/cliente/verificar', {
+      const { data }: IAdminVerifyDTO = await api.post(
+        '/cliente/verificar',
         user,
-      });
+      );
 
-      handleSave(getUser.admin?.toString());
+      handleSave(data.admin?.toString());
 
-      if (getUser.admin === true) {
+      if (data.admin === true) {
         navigate('/admin/list');
       } else {
         navigate('/');

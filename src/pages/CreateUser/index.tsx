@@ -24,9 +24,7 @@ export function CreateUser() {
 
   const createUser = useCallback(async () => {
     try {
-      await api.post('/cliente', {
-        user,
-      });
+      await api.post('/cliente', user);
 
       navigate('/admin/list');
     } catch (error) {

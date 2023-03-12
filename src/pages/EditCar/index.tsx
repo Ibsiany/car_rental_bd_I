@@ -34,12 +34,10 @@ export function EditCar() {
   const editCar = useCallback(async () => {
     try {
       await api.put('/carro', {
+        ...car,
         id: car_id,
-        carro: {
-          ...car,
-          valorDia: Number(car.valorDia),
-          taxa: Number(car.taxa),
-        },
+        valorDia: Number(car.valorDia),
+        taxa: Number(car.taxa),
       });
 
       navigate('/admin/list');

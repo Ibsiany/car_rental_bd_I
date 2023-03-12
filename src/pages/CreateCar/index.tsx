@@ -25,11 +25,9 @@ export function CreateCar() {
   const createCar = useCallback(async () => {
     try {
       await api.post('/carro', {
-        carro: {
-          ...car,
-          valorDia: Number(car.valorDia),
-          taxa: Number(car.taxa),
-        },
+        ...car,
+        valorDia: Number(car.valorDia),
+        taxa: Number(car.taxa),
       });
 
       navigate('/admin/list');

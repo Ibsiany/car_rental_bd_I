@@ -4,6 +4,8 @@ export interface IAdminDTO {
 }
 
 export interface IAdminVerifyDTO {
-  admin: boolean;
-  senha: string;
+  data: {
+    admin: boolean;
+    senha: string;
+  };
 }

@@ -34,8 +34,8 @@ export function EditUser() {
   const editUser = useCallback(async () => {
     try {
       await api.put('/cliente', {
+        ...user,
         id: user_id,
-        user,
       });
 
       navigate('/admin/list');
