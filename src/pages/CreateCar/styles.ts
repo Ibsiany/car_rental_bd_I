@@ -15,7 +15,6 @@ export const Container = styled.div`
 
 export const ContainerInfo = styled.div`
   width: 50vw;
-  height: 100%;
 
   margin: 0.75rem;
   padding: 0.5rem;
@@ -45,7 +44,7 @@ export const ContainerCars = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-top: 1rem;
+  margin-top: 2rem;
 `;
 
 export const ContainerCar = styled.div`

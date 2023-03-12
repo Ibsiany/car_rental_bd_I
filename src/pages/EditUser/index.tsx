@@ -56,6 +56,10 @@ export function EditUser() {
     [user, setUser],
   );
 
+  const style = {
+    height: '100%',
+  };
+
   return (
     <Container>
       <Toaster position="top-right" reverseOrder={false} />
@@ -104,7 +108,7 @@ export function EditUser() {
           </ContainerButton>
         </ContainerInfo>
       ) : (
-        <ContainerInfo>ACESSO NEGADO!</ContainerInfo>
+        <ContainerInfo style={style}>ACESSO NEGADO!</ContainerInfo>
       )}
 
       <Footer />

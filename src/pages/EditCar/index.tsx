@@ -56,6 +56,10 @@ export function EditCar() {
     [car, setCar],
   );
 
+  const style = {
+    height: '100%',
+  };
+
   return (
     <Container>
       <Toaster position="top-right" reverseOrder={false} />
@@ -171,7 +175,7 @@ export function EditCar() {
           </ContainerButton>
         </ContainerInfo>
       ) : (
-        <ContainerInfo>ACESSO NEGADO!</ContainerInfo>
+        <ContainerInfo style={style}>ACESSO NEGADO!</ContainerInfo>
       )}
 
       <Footer />
