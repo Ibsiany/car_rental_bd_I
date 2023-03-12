@@ -45,7 +45,7 @@ export const ContainerCars = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
 
 export const ContainerCar = styled.div`
