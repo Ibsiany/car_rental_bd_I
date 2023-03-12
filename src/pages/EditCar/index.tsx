@@ -78,8 +78,8 @@ export function EditCar() {
             <Label>
               NOME:
               <Input
-                id="name"
-                name="name"
+                id="nome"
+                name="nome"
                 type="text"
                 defaultValue={car.nome}
                 onChange={handleInputChange}
@@ -89,8 +89,8 @@ export function EditCar() {
             <Label>
               MODELO:
               <Input
-                id="model"
-                name="model"
+                id="modelo"
+                name="modelo"
                 type="text"
                 defaultValue={car.modelo}
                 onChange={handleInputChange}
@@ -100,8 +100,8 @@ export function EditCar() {
             <Label>
               PLACA:
               <Input
-                id="plate"
-                name="plate"
+                id="placa"
+                name="placa"
                 type="text"
                 defaultValue={car.placa}
                 onChange={handleInputChange}
@@ -122,8 +122,8 @@ export function EditCar() {
             <Label>
               DESCRIÇÃO:
               <Input
-                id="description"
-                name="description"
+                id="descricao"
+                name="descricao"
                 defaultValue={car.descricao}
                 type="text"
                 onChange={handleInputChange}
@@ -133,8 +133,8 @@ export function EditCar() {
             <Label>
               COMBUSTÍVEL:
               <Input
-                id="fuel"
-                name="fuel"
+                id="combustivel"
+                name="combustivel"
                 type="text"
                 defaultValue={car.combustivel}
                 onChange={handleInputChange}
@@ -155,8 +155,8 @@ export function EditCar() {
             <Label>
               POTÊNCIA:
               <Input
-                id="power"
-                name="power"
+                id="potencia"
+                name="potencia"
                 type="text"
                 defaultValue={car.potencia}
                 onChange={handleInputChange}
