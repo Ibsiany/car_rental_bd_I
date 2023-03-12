@@ -80,8 +80,8 @@ export function Admin() {
           <Label>
             SENHA:
             <Input
-              id="password"
-              name="password"
+              id="senha"
+              name="senha"
               onChange={handleInputChange}
               type="password"
             />
