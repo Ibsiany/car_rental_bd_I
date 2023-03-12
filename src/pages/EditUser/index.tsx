@@ -74,8 +74,8 @@ export function EditUser() {
             <Label>
               NOME:
               <Input
-                id="name"
-                name="name"
+                id="nome"
+                name="nome"
                 type="text"
                 defaultValue={user.nome}
                 onChange={handleInputChange}

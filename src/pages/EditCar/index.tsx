@@ -42,6 +42,7 @@ export function EditCar() {
         nome: car.nome,
         motor: car.motor,
         potencia: car.potencia,
+        disponibilidade: car.disponibilidade,
         autonomia: car.autonomia,
         valorDia: Number(car.valorDia),
         taxa: Number(car.taxa),
