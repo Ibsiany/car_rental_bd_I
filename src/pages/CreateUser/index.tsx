@@ -24,7 +24,7 @@ export function CreateUser() {
 
   const createUser = useCallback(async () => {
     try {
-      await api.post('/user/create', {
+      await api.post('/cliente', {
         user,
       });
 
@@ -55,8 +55,8 @@ export function CreateUser() {
             <Label>
               NOME:
               <Input
-                id="name"
-                name="name"
+                id="nome"
+                name="nome"
                 type="text"
                 onChange={handleInputChange}
               />

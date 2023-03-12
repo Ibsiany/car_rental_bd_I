@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'react-dragswitch/dist/index.css';
 import toast, { Toaster } from 'react-hot-toast';
@@ -15,13 +15,29 @@ import {
   ButtonContainer,
 } from './styles';
 import { api } from '../../services/api';
+import { IUserDTO } from '../../interfaces/IUserDTO';
+import { ICarDTO } from '../../interfaces/ICarDTO';
 
 export function ListData() {
+  const [users, setUser] = useState<IUserDTO[]>([]);
+  const [cars, setCar] = useState<ICarDTO[]>([]);
   const [isChecked, setIsChecked] = useState(true);
 
   const handleChangeisChecked = useCallback(() => {
     setIsChecked(!isChecked);
   }, [isChecked]);
+
+  useEffect(() => {
+    api.get(`/cliente`).then(response => {
+      setUser(response.data);
+    });
+  }, [users]);
+
+  useEffect(() => {
+    api.get(`/carro`).then(response => {
+      setCar(response.data);
+    });
+  }, [cars]);
 
   const deleteUser = useCallback(async (id: string) => {
     try {
@@ -80,18 +96,27 @@ export function ListData() {
                 </tr>
               </thead>
               <tbody>
-                <tr key="1">
-                  <td>Ibsiany</td>
-                  <td>11122233345</td>
-                  <td>
-                    <Link to="/admin/edit-user" state="1" id="rent">
-                      Editar
-                    </Link>
-                    <Button type="button" onClick={() => deleteUser('rent')}>
-                      Excluir
-                    </Button>
-                  </td>
-                </tr>
+                {users.map(user => {
+                  return (
+                    <tr key={user.id}>
+                      <td>{user.nome}</td>
+                      <td>{user.cpf}</td>
+                      <td>
+                        <Button type="button">
+                          <Link to="/admin/edit-user" state="1" id="rent">
+                            Editar
+                          </Link>
+                        </Button>
+                        <Button
+                          type="button"
+                          onClick={() => deleteUser('rent')}
+                        >
+                          Excluir
+                        </Button>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </Table>
           ) : (
@@ -106,19 +131,25 @@ export function ListData() {
                 </tr>
               </thead>
               <tbody>
-                <tr key="1">
-                  <td>Gol</td>
-                  <td>1.0</td>
-                  <td>UFOP022</td>
-                  <td>
-                    <Link to="/admin/edit-car" state="1" id="rent">
-                      Editar
-                    </Link>
-                    <Button type="button" onClick={() => deleteCar('rent')}>
-                      Excluir
-                    </Button>
-                  </td>
-                </tr>
+                {cars.map(car => {
+                  return (
+                    <tr key={car.id}>
+                      <td>{car.nome}</td>
+                      <td>{car.modelo}</td>
+                      <td>{car.placa}</td>
+                      <td>
+                        <Button type="button">
+                          <Link to="/admin/edit-car" state="1" id="rent">
+                            Editar
+                          </Link>
+                        </Button>
+                        <Button type="button" onClick={() => deleteCar('rent')}>
+                          Excluir
+                        </Button>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </Table>
           )}

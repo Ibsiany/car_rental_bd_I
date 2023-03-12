@@ -24,7 +24,7 @@ export function CreateCar() {
 
   const createCar = useCallback(async () => {
     try {
-      await api.post('/car/create', {
+      await api.post('/carro', {
         car,
       });
 
@@ -54,8 +54,8 @@ export function CreateCar() {
             <Label>
               NOME:
               <Input
-                id="name"
-                name="name"
+                id="nome"
+                name="nome"
                 type="text"
                 onChange={handleInputChange}
                 placeholder="digite o nome"
@@ -64,8 +64,8 @@ export function CreateCar() {
             <Label>
               MODELO:
               <Input
-                id="model"
-                name="model"
+                id="modelo"
+                name="modelo"
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: 1. 1 - Gol, da Volkswagen"
@@ -74,8 +74,8 @@ export function CreateCar() {
             <Label>
               PLACA:
               <Input
-                id="plate"
-                name="plate"
+                id="placa"
+                name="placa"
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: UFOPA22"
@@ -84,8 +84,8 @@ export function CreateCar() {
             <Label>
               DESCRIÇÃO:
               <Input
-                id="description"
-                name="description"
+                id="descricao"
+                name="descricao"
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: Possui 4 portas..."
@@ -94,8 +94,8 @@ export function CreateCar() {
             <Label>
               COMBUSTÍVEL:
               <Input
-                id="fuel"
-                name="fuel"
+                id="combustivel"
+                name="combustivel"
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: diesel"
@@ -114,11 +114,31 @@ export function CreateCar() {
             <Label>
               POTÊNCIA:
               <Input
-                id="power"
-                name="power"
+                id="potencia"
+                name="potencia"
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: 1.6"
+              />
+            </Label>
+            <Label>
+              VALOR POR DIA:
+              <Input
+                id="valorDia"
+                name="valorDia"
+                type="number"
+                onChange={handleInputChange}
+                placeholder="Ex: 100"
+              />
+            </Label>
+            <Label>
+              TAXA:
+              <Input
+                id="taxa"
+                name="taxa"
+                type="number"
+                onChange={handleInputChange}
+                placeholder="Ex: 100"
               />
             </Label>
           </ContainerInput>

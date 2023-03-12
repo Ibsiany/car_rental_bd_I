@@ -28,7 +28,7 @@ export function EditCar() {
   const data = location.state as ILocationState;
 
   useEffect(() => {
-    api.get(`/car/${data.car_id}`).then(response => {
+    api.get(`/carro/${data.car_id}`).then(response => {
       setCar(response.data);
     });
   }, [car, data]);
@@ -71,7 +71,7 @@ export function EditCar() {
                 id="name"
                 name="name"
                 type="text"
-                value={car.name}
+                value={car.nome}
                 onChange={handleInputChange}
                 placeholder="digite o nome"
               />
@@ -82,7 +82,7 @@ export function EditCar() {
                 id="model"
                 name="model"
                 type="text"
-                value={car.model}
+                value={car.modelo}
                 onChange={handleInputChange}
                 placeholder="Ex: 1. 1 - Gol, da Volkswagen"
               />
@@ -93,7 +93,7 @@ export function EditCar() {
                 id="plate"
                 name="plate"
                 type="text"
-                value={car.plate}
+                value={car.placa}
                 onChange={handleInputChange}
                 placeholder="Ex: UFOPA22"
               />
@@ -103,7 +103,7 @@ export function EditCar() {
               <Input
                 id="description"
                 name="description"
-                value={car.description}
+                value={car.descricao}
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: Possui 4 portas..."
@@ -115,7 +115,7 @@ export function EditCar() {
                 id="fuel"
                 name="fuel"
                 type="text"
-                value={car.fuel}
+                value={car.combustivel}
                 onChange={handleInputChange}
                 placeholder="Ex: diesel"
               />
@@ -137,9 +137,31 @@ export function EditCar() {
                 id="power"
                 name="power"
                 type="text"
-                value={car.power}
+                value={car.potencia}
                 onChange={handleInputChange}
                 placeholder="Ex: 1.6"
+              />
+            </Label>
+            <Label>
+              VALOR POR DIA:
+              <Input
+                id="valorDia"
+                name="valorDia"
+                type="number"
+                value={car.valorDia}
+                onChange={handleInputChange}
+                placeholder="Ex: 100"
+              />
+            </Label>
+            <Label>
+              TAXA:
+              <Input
+                id="taxa"
+                name="taxa"
+                type="number"
+                value={car.taxa}
+                onChange={handleInputChange}
+                placeholder="Ex: 100"
               />
             </Label>
           </ContainerInput>

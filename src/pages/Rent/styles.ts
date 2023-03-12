@@ -52,25 +52,27 @@ export const Info = styled.span`
 
 export const ContainerCars = styled.div`
   display: flex;
-  align-items: start;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  /* align-items: start;
+  justify-content: space-between; */
 `;
 
 export const ContainerCar = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
   padding: 1rem;
 
-  background: #f7f7f7;
-  box-shadow: 4px 4px 4px #ff4d00;
+  width: 50%;
 `;
 
 export const ContainerCarInfo = styled.div`
   display: flex;
   align-items: start;
   justify-content: space-around;
+
+  padding: 0.5rem;
+  background: #f7f7f7;
+  box-shadow: 4px 4px 4px #ff4d00;
 `;
 
 export const ContainerText = styled.div`

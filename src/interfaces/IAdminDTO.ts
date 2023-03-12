@@ -1,9 +1,9 @@
 export interface IAdminDTO {
   cpf: string;
-  password: string;
+  senha: string;
 }
 
 export interface IAdminVerifyDTO {
   admin: boolean;
-  password: string;
+  senha: string;
 }

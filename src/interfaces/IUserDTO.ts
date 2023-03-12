@@ -1,5 +1,8 @@
 export interface IUserDTO {
-  name: string;
+  id: number;
+  nome: string;
   email: string;
   cpf: string;
+  senha: string;
+  admin: true;
 }

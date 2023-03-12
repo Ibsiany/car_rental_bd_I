@@ -76,13 +76,15 @@ export const Table = styled.table`
   width: 100%;
 
   a {
-    padding: 6px;
+    text-decoration: none;
+    color: #000000;
+
+    padding: 3.5px;
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    text-decoration: none;
 
     &:hover {
       opacity: 0.8;
@@ -96,7 +98,7 @@ export const Table = styled.table`
 `;
 
 export const Button = styled.button`
-  padding: 6px;
+  padding: 3.5px;
   background-color: #4caf50;
   color: white;
   border: none;

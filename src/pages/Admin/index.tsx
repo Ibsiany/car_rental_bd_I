@@ -43,7 +43,7 @@ export function Admin() {
 
   const verify = useCallback(async () => {
     try {
-      const getUser: IAdminVerifyDTO = await api.post('/user/verify', {
+      const getUser: IAdminVerifyDTO = await api.post('/cliente/verificar', {
         user,
       });
 

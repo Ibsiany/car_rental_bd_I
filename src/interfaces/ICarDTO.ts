@@ -1,9 +1,14 @@
 export interface ICarDTO {
-  name: string;
-  model: string;
-  plate: string;
-  description: string;
-  fuel: string;
+  id: number;
+  placa: string;
+  modelo: string;
+  descricao: string;
+  disponibilidade: boolean;
+  combustivel: string;
+  nome: string;
   motor: string;
-  power: string;
+  potencia: string;
+  autonomia: string;
+  valorDia: number;
+  taxa: number;
 }

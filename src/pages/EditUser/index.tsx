@@ -71,7 +71,7 @@ export function EditUser() {
                 id="name"
                 name="name"
                 type="text"
-                value={user.name}
+                value={user.nome}
                 onChange={handleInputChange}
               />
             </Label>
