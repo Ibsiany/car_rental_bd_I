@@ -41,7 +41,7 @@ export function ListData() {
     });
   }, []);
 
-  const deleteUser = useCallback(async (id: string) => {
+  const deleteUser = useCallback(async (id: number) => {
     try {
       await api.delete(`/cliente/${id}`);
 
@@ -51,7 +51,7 @@ export function ListData() {
     }
   }, []);
 
-  const deleteCar = useCallback(async (id: string) => {
+  const deleteCar = useCallback(async (id: number) => {
     try {
       await api.delete(`/carro/${id}`);
 
@@ -109,13 +109,17 @@ export function ListData() {
                       <td>{user.cpf}</td>
                       <td>
                         <Button type="button">
-                          <Link to="/admin/edit-user" state={user.id} id="rent">
+                          <Link
+                            to="/admin/edit-user"
+                            state={user.id}
+                            id={user.id.toString()}
+                          >
                             Editar
                           </Link>
                         </Button>
                         <Button
                           type="button"
-                          onClick={() => deleteUser('rent')}
+                          onClick={() => deleteUser(user.id)}
                         >
                           Excluir
                         </Button>
@@ -145,11 +149,15 @@ export function ListData() {
                       <td>{car.placa}</td>
                       <td>
                         <Button type="button">
-                          <Link to="/admin/edit-car" state={car.id} id="rent">
+                          <Link
+                            to="/admin/edit-car"
+                            state={car.id}
+                            id={car.id.toString()}
+                          >
                             Editar
                           </Link>
                         </Button>
-                        <Button type="button" onClick={() => deleteCar('rent')}>
+                        <Button type="button" onClick={() => deleteCar(car.id)}>
                           Excluir
                         </Button>
                       </td>
