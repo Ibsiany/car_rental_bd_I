@@ -1,4 +1,4 @@
-import React, { useCallback, ChangeEvent, useState } from 'react';
+import React, { useCallback, ChangeEvent, useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 import { useLocation } from 'react-router-dom';
@@ -22,18 +22,22 @@ import {
   Button,
 } from './styles';
 import { IRentDTO } from '../../interfaces/IRentDTO';
+import { ICarDTO } from '../../interfaces/ICarDTO';
 import logo from '../../assets/logo.png';
 import { api } from '../../services/api';
 
-interface ILocationState {
-  id: string;
-}
-
 export function CreateRent() {
   const [data, setData] = useState<IRentDTO>({} as IRentDTO);
+  const [car, setCar] = useState<ICarDTO>({} as ICarDTO);
 
   const location = useLocation();
-  const car = location.state as ILocationState;
+  const car_id = location.state;
+
+  useEffect(() => {
+    api.get(`/carro/${car_id}`).then(response => {
+      setCar(response.data);
+    });
+  }, [car, car_id]);
 
   const rent = useCallback(async () => {
     try {
@@ -64,16 +68,21 @@ export function CreateRent() {
       <ContainerInfo>
         <ContainerCars>
           <ContainerCar>
-            <Title>Porsche 911 Carrera 4s</Title>
+            <Title>{car.nome}</Title>
             <ContainerCarInfo>
               <ContainerImage>
                 <Image src={logo} alt="logo" />
               </ContainerImage>
               <ContainerText>
-                <Details>Coupe</Details>
-                <Details>3.0l Twin Turbo</Details>
-                <Details>3.0 L</Details>
-                <Details className="last">Cinza</Details>
+                <Details>Modelo: {car.modelo}</Details>
+                <Details>Autonomia: {car.autonomia}</Details>
+                <Details>Potencia: {car.potencia}</Details>
+                <Details>Taxa: {car.taxa}</Details>
+                <Details>Combustivel: {car.combustivel}</Details>
+                <Details>Motor: {car.motor}</Details>
+                <Details>Valor por dia: {car.valorDia}</Details>
+                <Details>Taxa de atraso: {car.taxa}</Details>
+                <Details className="last">Descrição: {car.descricao}</Details>
               </ContainerText>
             </ContainerCarInfo>
           </ContainerCar>

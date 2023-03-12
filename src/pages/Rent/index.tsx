@@ -56,7 +56,7 @@ export function Rent() {
                       <Details>{car.potencia}</Details>
                       <Details className="last">{car.valorDia}</Details>
 
-                      <Link to="/rent/create" id="rent-create">
+                      <Link to="/rent/create" id="rent-create" state={car.id}>
                         ALUGAR
                       </Link>
                     </ContainerText>
