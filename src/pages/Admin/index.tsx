@@ -77,7 +77,7 @@ export function Admin() {
             />
           </Label>
           <Label>
-            PALAVRA-PASSE:
+            SENHA:
             <Input
               id="password"
               name="password"
