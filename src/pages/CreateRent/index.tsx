@@ -85,8 +85,8 @@ export function CreateRent() {
           <Label>
             Data de devolução:
             <Input
-              id="date"
-              name="date"
+              id="data"
+              name="data"
               type="date"
               onChange={handleInputChange}
             />

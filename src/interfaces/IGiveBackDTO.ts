@@ -1,4 +1,4 @@
 export interface IGiveBackDTO {
-  plate: string;
+  placa: string;
   cpf: string;
 }

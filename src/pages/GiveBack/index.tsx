@@ -59,8 +59,8 @@ export function GiveBack() {
           <Label>
             PLACA:
             <Input
-              id="plate"
-              name="plate"
+              id="placa"
+              name="placa"
               type="text"
               onChange={handleInputChange}
               placeholder="Ex: UFOPA22"
