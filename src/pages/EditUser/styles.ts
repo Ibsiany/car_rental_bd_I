@@ -15,7 +15,6 @@ export const Container = styled.div`
 
 export const ContainerInfo = styled.div`
   width: 50vw;
-  height: 100%;
 
   margin: 0.75rem;
   padding: 0.5rem;

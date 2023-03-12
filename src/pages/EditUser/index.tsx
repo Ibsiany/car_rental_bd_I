@@ -17,21 +17,17 @@ import {
 import { IUserDTO } from '../../interfaces/IUserDTO';
 import { api } from '../../services/api';
 
-interface ILocationState {
-  user_id: string;
-}
-
 export function EditUser() {
   const [user, setUser] = useState<IUserDTO>({} as IUserDTO);
 
   const location = useLocation();
-  const data = location.state as ILocationState;
+  const user_id = location.state;
 
   useEffect(() => {
-    api.get(`/user/${data.user_id}`).then(response => {
+    api.get(`/user/${user_id}`).then(response => {
       setUser(response.data);
     });
-  }, [user, data]);
+  }, [user, user_id]);
 
   const navigate = useNavigate();
 

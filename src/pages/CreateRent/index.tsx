@@ -1,6 +1,7 @@
 import React, { useCallback, ChangeEvent, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
+import { useLocation } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import {
@@ -24,8 +25,15 @@ import { IRentDTO } from '../../interfaces/IRentDTO';
 import logo from '../../assets/logo.png';
 import { api } from '../../services/api';
 
+interface ILocationState {
+  id: string;
+}
+
 export function CreateRent() {
   const [data, setData] = useState<IRentDTO>({} as IRentDTO);
+
+  const location = useLocation();
+  const car = location.state as ILocationState;
 
   const rent = useCallback(async () => {
     try {

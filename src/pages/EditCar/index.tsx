@@ -17,21 +17,17 @@ import {
 } from './styles';
 import { api } from '../../services/api';
 
-interface ILocationState {
-  car_id: string;
-}
-
 export function EditCar() {
   const [car, setCar] = useState<ICarDTO>({} as ICarDTO);
 
   const location = useLocation();
-  const data = location.state as ILocationState;
+  const car_id = location.state;
 
   useEffect(() => {
-    api.get(`/carro/${data.car_id}`).then(response => {
+    api.get(`/carro/${car_id}`).then(response => {
       setCar(response.data);
     });
-  }, [car, data]);
+  }, [car, car_id]);
 
   const navigate = useNavigate();
 

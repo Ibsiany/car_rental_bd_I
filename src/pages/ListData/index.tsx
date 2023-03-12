@@ -107,7 +107,7 @@ export function ListData() {
                       <td>{user.cpf}</td>
                       <td>
                         <Button type="button">
-                          <Link to="/admin/edit-user" state="1" id="rent">
+                          <Link to="/admin/edit-user" state={user.id} id="rent">
                             Editar
                           </Link>
                         </Button>
@@ -143,7 +143,7 @@ export function ListData() {
                       <td>{car.placa}</td>
                       <td>
                         <Button type="button">
-                          <Link to="/admin/edit-car" state="1" id="rent">
+                          <Link to="/admin/edit-car" state={car.id} id="rent">
                             Editar
                           </Link>
                         </Button>
