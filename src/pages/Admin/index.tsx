@@ -24,12 +24,6 @@ export function Admin() {
     localStorage.setItem('status', admin);
   };
 
-  const handleLoad = () => {
-    const statusLocalStorage = localStorage.getItem('status');
-
-    console.log(statusLocalStorage);
-  };
-
   const handleInputChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
       const { name, value } = event.target;
