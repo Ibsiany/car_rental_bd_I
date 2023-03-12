@@ -26,10 +26,10 @@ export function EditUser() {
   const user_id = location.state;
 
   useEffect(() => {
-    api.get(`/user/${user_id}`).then(response => {
+    api.get(`/cliente/${user_id}`).then(response => {
       setUser(response.data);
     });
-  }, [user, user_id]);
+  }, [user_id]);
 
   const navigate = useNavigate();
 
@@ -69,7 +69,7 @@ export function EditUser() {
       <Header />
       {admin === 'true' ? (
         <ContainerInfo>
-          <Title>Realizar cadastro de usuário</Title>
+          <Title>Realizar edição de usuário</Title>
           <ContainerInput>
             <Label>
               NOME:
