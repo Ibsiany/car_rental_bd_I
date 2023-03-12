@@ -103,6 +103,17 @@ export function EditCar() {
               />
             </Label>
             <Label>
+              AUTONOMIA:
+              <Input
+                id="autonomia"
+                name="autonomia"
+                type="text"
+                value={car.autonomia}
+                onChange={handleInputChange}
+                placeholder="Ex: UFOPA22"
+              />
+            </Label>
+            <Label>
               DESCRIÇÃO:
               <Input
                 id="description"

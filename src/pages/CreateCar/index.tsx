@@ -116,6 +116,15 @@ export function CreateCar() {
               />
             </Label>
             <Label>
+              AUTONOMIA:
+              <Input
+                id="autonomia"
+                name="autonomia"
+                type="text"
+                onChange={handleInputChange}
+              />
+            </Label>
+            <Label>
               POTÊNCIA:
               <Input
                 id="potencia"
