@@ -34,11 +34,13 @@ export function EditUser() {
   const editUser = useCallback(async () => {
     try {
       await api.put('/cliente', {
+        id: user_id,
         user,
       });
 
       navigate('/admin/list');
     } catch (error) {
+      console.log(error);
       toast.error('Ocorreu algum erro na edição do usuário!');
     }
   }, [user, navigate]);

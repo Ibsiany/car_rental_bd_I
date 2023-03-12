@@ -55,6 +55,7 @@ export function Admin() {
         navigate('/');
       }
     } catch (error) {
+      console.log(error);
       toast.error('Você não tem permissão!');
     }
   }, [user, navigate]);

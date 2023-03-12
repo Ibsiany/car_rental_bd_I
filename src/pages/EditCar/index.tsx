@@ -34,6 +34,7 @@ export function EditCar() {
   const editCar = useCallback(async () => {
     try {
       await api.put('/carro', {
+        id: car_id,
         carro: {
           ...car,
           valorDia: Number(car.valorDia),
@@ -43,6 +44,7 @@ export function EditCar() {
 
       navigate('/admin/list');
     } catch (error) {
+      console.log(error);
       toast.error('Ocorreu algum erro na edição do carro!');
     }
   }, [car, navigate]);

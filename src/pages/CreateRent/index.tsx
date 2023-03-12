@@ -47,6 +47,7 @@ export function CreateRent() {
 
       toast.success('Carro alugado com sucesso!');
     } catch (error) {
+      console.log(error);
       toast.error('Ocorreu algum erro ao alugar o carro!');
     }
   }, [data]);
