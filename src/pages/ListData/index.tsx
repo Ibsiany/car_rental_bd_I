@@ -45,6 +45,10 @@ export function ListData() {
     try {
       await api.delete(`/cliente/${id}`);
 
+      const findUsers = users.filter(user => user.id !== id);
+
+      setUser(findUsers);
+
       toast.success('Usuário deletado com sucesso!');
     } catch (error) {
       toast.error('Ocorreu algum erro na deleção do usuário!');
@@ -54,6 +58,10 @@ export function ListData() {
   const deleteCar = useCallback(async (id: number) => {
     try {
       await api.delete(`/carro/${id}`);
+
+      const findCars = cars.filter(car => car.id !== id);
+
+      setCar(findCars);
 
       toast.success('Carro deletado com sucesso!');
     } catch (error) {
