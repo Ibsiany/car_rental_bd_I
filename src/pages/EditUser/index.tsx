@@ -20,6 +20,8 @@ import { api } from '../../services/api';
 export function EditUser() {
   const [user, setUser] = useState<IUserDTO>({} as IUserDTO);
 
+  const admin = localStorage.getItem('status');
+
   const location = useLocation();
   const user_id = location.state;
 
@@ -62,7 +64,7 @@ export function EditUser() {
       <Toaster position="top-right" reverseOrder={false} />
 
       <Header />
-      {localStorage.getItem('status') === 'true' ? (
+      {admin === 'true' ? (
         <ContainerInfo>
           <Title>Realizar cadastro de usuário</Title>
           <ContainerInput>

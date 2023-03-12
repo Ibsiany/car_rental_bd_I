@@ -23,6 +23,8 @@ export function ListData() {
   const [cars, setCar] = useState<ICarDTO[]>([]);
   const [isChecked, setIsChecked] = useState(true);
 
+  const admin = localStorage.getItem('status');
+
   const handleChangeisChecked = useCallback(() => {
     setIsChecked(!isChecked);
   }, [isChecked]);
@@ -68,7 +70,7 @@ export function ListData() {
       <Toaster position="top-right" reverseOrder={false} />
 
       <Header />
-      {localStorage.getItem('status') === 'true' ? (
+      {admin === 'true' ? (
         <ContainerInfo>
           <Title>Tela do administrador</Title>
 
