@@ -36,7 +36,7 @@ export function Admin() {
 
       setUser({ ...user, [name]: value });
     },
-    [user, setUser],
+    [user],
   );
 
   const navigate = useNavigate();

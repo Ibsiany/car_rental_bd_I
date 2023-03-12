@@ -32,7 +32,7 @@ export function CreateUser() {
     } catch (error) {
       toast.error('Ocorreu algum erro na criação do usuário!');
     }
-  }, [user, navigate]);
+  }, [navigate, user]);
 
   const handleInputChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +40,7 @@ export function CreateUser() {
 
       setUser({ ...user, [name]: value });
     },
-    [user, setUser],
+    [user],
   );
 
   const style = {

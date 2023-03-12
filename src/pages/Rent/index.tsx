@@ -28,7 +28,7 @@ export function Rent() {
     api.get(`/carro`).then(response => {
       setCars(response.data);
     });
-  }, [cars]);
+  }, []);
 
   return (
     <Container>

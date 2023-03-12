@@ -27,13 +27,13 @@ export function EditCar() {
     api.get(`/carro/${car_id}`).then(response => {
       setCar(response.data);
     });
-  }, [car, car_id]);
+  }, [car_id]);
 
   const navigate = useNavigate();
 
   const editCar = useCallback(async () => {
     try {
-      await api.put('/car/edit', {
+      await api.put('/carro', {
         carro: {
           ...car,
           valorDia: Number(car.valorDia),
@@ -53,7 +53,7 @@ export function EditCar() {
 
       setCar({ ...car, [name]: value });
     },
-    [car, setCar],
+    [car],
   );
 
   const style = {

@@ -44,7 +44,7 @@ export function CreateCar() {
 
       setCar({ ...car, [name]: value });
     },
-    [car, setCar],
+    [car],
   );
 
   const style = {

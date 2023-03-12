@@ -33,7 +33,7 @@ export function EditUser() {
 
   const editUser = useCallback(async () => {
     try {
-      await api.put('/user/edit', {
+      await api.put('/cliente', {
         user,
       });
 
@@ -49,7 +49,7 @@ export function EditUser() {
 
       setUser({ ...user, [name]: value });
     },
-    [user, setUser],
+    [user],
   );
 
   const style = {

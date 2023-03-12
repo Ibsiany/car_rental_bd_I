@@ -37,7 +37,7 @@ export function CreateRent() {
     api.get(`/carro/${car_id}`).then(response => {
       setCar(response.data);
     });
-  }, [car, car_id]);
+  }, [car_id]);
 
   const rent = useCallback(async () => {
     try {
@@ -57,7 +57,7 @@ export function CreateRent() {
 
       setData({ ...data, [name]: value });
     },
-    [data, setData],
+    [data],
   );
 
   return (

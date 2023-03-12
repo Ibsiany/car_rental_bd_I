@@ -31,17 +31,17 @@ export function ListData() {
     api.get(`/cliente`).then(response => {
       setUser(response.data);
     });
-  }, [users]);
+  }, []);
 
   useEffect(() => {
     api.get(`/carro`).then(response => {
       setCar(response.data);
     });
-  }, [cars]);
+  }, []);
 
   const deleteUser = useCallback(async (id: string) => {
     try {
-      await api.delete(`/user/delete${id}`);
+      await api.delete(`/cliente/${id}`);
 
       toast.success('Usuário deletado com sucesso!');
     } catch (error) {
@@ -51,7 +51,7 @@ export function ListData() {
 
   const deleteCar = useCallback(async (id: string) => {
     try {
-      await api.delete(`/car/delete/${id}`);
+      await api.delete(`/carro/${id}`);
 
       toast.success('Carro deletado com sucesso!');
     } catch (error) {
