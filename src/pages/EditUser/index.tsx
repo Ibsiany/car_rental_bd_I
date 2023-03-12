@@ -35,9 +35,12 @@ export function EditUser() {
 
   const editUser = useCallback(async () => {
     try {
-      await api.put('/cliente', {
-        ...user,
-        id: user_id,
+      await api.put(`/cliente/${user_id}`, {
+        id: Number(user_id),
+        nome: user.nome,
+        email: user.email,
+        cpf: user.cpf,
+        senha: user.senha,
       });
 
       navigate('/admin/list');

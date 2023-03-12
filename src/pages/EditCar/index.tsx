@@ -33,9 +33,16 @@ export function EditCar() {
 
   const editCar = useCallback(async () => {
     try {
-      await api.put('/carro', {
-        ...car,
-        id: car_id,
+      await api.put(`/carro/${car_id}`, {
+        id: Number(car_id),
+        placa: car.placa,
+        modelo: car.modelo,
+        descricao: car.descricao,
+        combustivel: car.combustivel,
+        nome: car.nome,
+        motor: car.motor,
+        potencia: car.potencia,
+        autonomia: car.autonomia,
         valorDia: Number(car.valorDia),
         taxa: Number(car.taxa),
       });
