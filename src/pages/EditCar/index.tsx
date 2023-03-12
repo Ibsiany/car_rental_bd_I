@@ -75,7 +75,7 @@ export function EditCar() {
                 id="name"
                 name="name"
                 type="text"
-                value={car.nome}
+                defaultValue={car.nome}
                 onChange={handleInputChange}
                 placeholder="digite o nome"
               />
@@ -86,7 +86,7 @@ export function EditCar() {
                 id="model"
                 name="model"
                 type="text"
-                value={car.modelo}
+                defaultValue={car.modelo}
                 onChange={handleInputChange}
                 placeholder="Ex: 1. 1 - Gol, da Volkswagen"
               />
@@ -97,7 +97,7 @@ export function EditCar() {
                 id="plate"
                 name="plate"
                 type="text"
-                value={car.placa}
+                defaultValue={car.placa}
                 onChange={handleInputChange}
                 placeholder="Ex: UFOPA22"
               />
@@ -108,7 +108,7 @@ export function EditCar() {
                 id="autonomia"
                 name="autonomia"
                 type="text"
-                value={car.autonomia}
+                defaultValue={car.autonomia}
                 onChange={handleInputChange}
                 placeholder="Ex: UFOPA22"
               />
@@ -118,7 +118,7 @@ export function EditCar() {
               <Input
                 id="description"
                 name="description"
-                value={car.descricao}
+                defaultValue={car.descricao}
                 type="text"
                 onChange={handleInputChange}
                 placeholder="Ex: Possui 4 portas..."
@@ -130,7 +130,7 @@ export function EditCar() {
                 id="fuel"
                 name="fuel"
                 type="text"
-                value={car.combustivel}
+                defaultValue={car.combustivel}
                 onChange={handleInputChange}
                 placeholder="Ex: diesel"
               />
@@ -141,7 +141,7 @@ export function EditCar() {
                 id="motor"
                 name="motor"
                 type="text"
-                value={car.motor}
+                defaultValue={car.motor}
                 onChange={handleInputChange}
                 placeholder="Ex: Motor vertical"
               />
@@ -152,7 +152,7 @@ export function EditCar() {
                 id="power"
                 name="power"
                 type="text"
-                value={car.potencia}
+                defaultValue={car.potencia}
                 onChange={handleInputChange}
                 placeholder="Ex: 1.6"
               />
@@ -163,7 +163,7 @@ export function EditCar() {
                 id="valorDia"
                 name="valorDia"
                 type="number"
-                value={car.valorDia}
+                defaultValue={car.valorDia}
                 onChange={handleInputChange}
                 placeholder="Ex: 100"
               />
@@ -174,7 +174,7 @@ export function EditCar() {
                 id="taxa"
                 name="taxa"
                 type="number"
-                value={car.taxa}
+                defaultValue={car.taxa}
                 onChange={handleInputChange}
                 placeholder="Ex: 100"
               />

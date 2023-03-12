@@ -71,7 +71,7 @@ export function EditUser() {
                 id="name"
                 name="name"
                 type="text"
-                value={user.nome}
+                defaultValue={user.nome}
                 onChange={handleInputChange}
               />
             </Label>
@@ -81,7 +81,7 @@ export function EditUser() {
                 id="email"
                 name="email"
                 type="text"
-                value={user.email}
+                defaultValue={user.email}
                 onChange={handleInputChange}
                 placeholder="Ex: alguem@email.com"
               />
@@ -92,7 +92,7 @@ export function EditUser() {
                 id="cpf"
                 name="cpf"
                 type="number"
-                value={user.cpf}
+                defaultValue={user.cpf}
                 onChange={handleInputChange}
                 placeholder="Ex: 13785091000160"
               />
