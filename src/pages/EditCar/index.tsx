@@ -47,7 +47,7 @@ export function EditCar() {
       console.log(error);
       toast.error('Ocorreu algum erro na edição do carro!');
     }
-  }, [car, navigate]);
+  }, [car, navigate, car_id]);
 
   const handleInputChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {

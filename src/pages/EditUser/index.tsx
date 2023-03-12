@@ -43,7 +43,7 @@ export function EditUser() {
       console.log(error);
       toast.error('Ocorreu algum erro na edição do usuário!');
     }
-  }, [user, navigate]);
+  }, [user, navigate, user_id]);
 
   const handleInputChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
