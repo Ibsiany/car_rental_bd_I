@@ -44,7 +44,6 @@ export function EditCar() {
 
       navigate('/admin/list');
     } catch (error) {
-      console.log(error);
       toast.error('Ocorreu algum erro na edição do carro!');
     }
   }, [car, navigate, car_id]);

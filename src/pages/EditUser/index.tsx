@@ -40,7 +40,6 @@ export function EditUser() {
 
       navigate('/admin/list');
     } catch (error) {
-      console.log(error);
       toast.error('Ocorreu algum erro na edição do usuário!');
     }
   }, [user, navigate, user_id]);

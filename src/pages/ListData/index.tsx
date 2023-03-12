@@ -45,7 +45,6 @@ export function ListData() {
 
       toast.success('Usuário deletado com sucesso!');
     } catch (error) {
-      console.log(error);
       toast.error('Ocorreu algum erro na deleção do usuário!');
     }
   }, []);
@@ -56,7 +55,6 @@ export function ListData() {
 
       toast.success('Carro deletado com sucesso!');
     } catch (error) {
-      console.log(error);
       toast.error('Ocorreu algum erro na deleção do carro!');
     }
   }, []);

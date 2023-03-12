@@ -34,7 +34,6 @@ export function CreateCar() {
 
       navigate('/admin/list');
     } catch (error) {
-      console.log(error);
       toast.error('Ocorreu algum erro na criação do carro!');
     }
   }, [car, navigate]);

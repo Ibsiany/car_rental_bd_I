@@ -26,7 +26,6 @@ export function GiveBack() {
 
       toast.success('Registo de carro devolvido com sucesso!');
     } catch (error) {
-      console.log(error);
       toast.error('Ocorreu algum erro ao registrar devolução!');
     }
   }, [data]);
