@@ -24,7 +24,12 @@ export function CreateUser() {
 
   const createUser = useCallback(async () => {
     try {
-      await api.post('/cliente', user);
+      await api.post('/cliente', {
+        nome: user.nome,
+        email: user.email,
+        cpf: user.cpf,
+        senha: user.senha,
+      });
 
       navigate('/admin/list');
     } catch (error) {

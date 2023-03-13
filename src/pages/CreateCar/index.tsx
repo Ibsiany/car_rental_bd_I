@@ -25,7 +25,15 @@ export function CreateCar() {
   const createCar = useCallback(async () => {
     try {
       await api.post('/carro', {
-        ...car,
+        placa: car.placa,
+        modelo: car.modelo,
+        descricao: car.descricao,
+        combustivel: car.combustivel,
+        nome: car.nome,
+        motor: car.motor,
+        potencia: car.potencia,
+        disponibilidade: car.disponibilidade,
+        autonomia: car.autonomia,
         valorDia: Number(car.valorDia),
         taxa: Number(car.taxa),
       });
