@@ -32,7 +32,7 @@ export function CreateCar() {
         nome: car.nome,
         motor: car.motor,
         potencia: car.potencia,
-        disponibilidade: car.disponibilidade,
+        disponibilidade: true,
         autonomia: car.autonomia,
         valorDia: Number(car.valorDia),
         taxa: Number(car.taxa),
