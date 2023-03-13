@@ -51,8 +51,11 @@ export const Info = styled.span`
 `;
 
 export const ContainerCars = styled.div`
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* display: flex;
+  flex-flow: row wrap; */
   /* align-items: start;
   justify-content: space-between; */
 `;
@@ -62,7 +65,7 @@ export const ContainerCar = styled.div`
   flex-direction: column;
   padding: 1rem;
 
-  width: 50%;
+  /* width: 50%; */
 `;
 
 export const ContainerCarInfo = styled.div`

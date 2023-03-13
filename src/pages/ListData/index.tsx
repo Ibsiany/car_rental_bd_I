@@ -41,33 +41,39 @@ export function ListData() {
     });
   }, []);
 
-  const deleteUser = useCallback(async (id: number) => {
-    try {
-      await api.delete(`/cliente/${id}`);
+  const deleteUser = useCallback(
+    async (id: number) => {
+      try {
+        await api.delete(`/cliente/${id}`);
 
-      const findUsers = users.filter(user => user.id !== id);
+        const findUsers = users.filter(user => user.id !== id);
 
-      setUser(findUsers);
+        setUser(findUsers);
 
-      toast.success('Usuário deletado com sucesso!');
-    } catch (error) {
-      toast.error('Ocorreu algum erro na deleção do usuário!');
-    }
-  }, []);
+        toast.success('Usuário deletado com sucesso!');
+      } catch (error) {
+        toast.error('Ocorreu algum erro na deleção do usuário!');
+      }
+    },
+    [users],
+  );
 
-  const deleteCar = useCallback(async (id: number) => {
-    try {
-      await api.delete(`/carro/${id}`);
+  const deleteCar = useCallback(
+    async (id: number) => {
+      try {
+        await api.delete(`/carro/${id}`);
 
-      const findCars = cars.filter(car => car.id !== id);
+        const findCars = cars.filter(car => car.id !== id);
 
-      setCar(findCars);
+        setCar(findCars);
 
-      toast.success('Carro deletado com sucesso!');
-    } catch (error) {
-      toast.error('Ocorreu algum erro na deleção do carro!');
-    }
-  }, []);
+        toast.success('Carro deletado com sucesso!');
+      } catch (error) {
+        toast.error('Ocorreu algum erro na deleção do carro!');
+      }
+    },
+    [cars],
+  );
 
   const style = {
     height: '100%',
