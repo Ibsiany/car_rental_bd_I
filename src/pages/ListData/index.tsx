@@ -125,7 +125,7 @@ export function ListData() {
                         <Button type="button">
                           <Link
                             to="/admin/edit-user"
-                            state={user.id}
+                            state={[user.id, user.nome]}
                             id={user.id.toString()}
                           >
                             Editar
@@ -136,6 +136,15 @@ export function ListData() {
                           onClick={() => deleteUser(user.id)}
                         >
                           Excluir
+                        </Button>
+                        <Button type="button">
+                          <Link
+                            to="/admin/view-cars"
+                            state={user}
+                            id={user.id.toString()}
+                          >
+                            +
+                          </Link>
                         </Button>
                       </td>
                     </tr>

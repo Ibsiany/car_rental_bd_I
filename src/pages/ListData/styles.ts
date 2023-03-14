@@ -80,7 +80,6 @@ export const Table = styled.table`
     color: #000000;
 
     padding: 3.5px;
-    background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 4px;
@@ -91,9 +90,18 @@ export const Table = styled.table`
     }
   }
 
-  button:last-child {
+  button:nth-child(1) {
+    background-color: #4caf50;
+  }
+
+  button:nth-child(2) {
     margin-left: 8px;
     background-color: #d11507;
+  }
+
+  button:nth-child(3) {
+    margin-left: 8px;
+    background-color: blue;
   }
 `;
 

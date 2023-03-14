@@ -10,6 +10,7 @@ import { GiveBack } from '../pages/GiveBack';
 import { Home } from '../pages/Home';
 import { ListData } from '../pages/ListData';
 import { Rent } from '../pages/Rent';
+import { ViewCars } from '../pages/ViewCars';
 
 export function Routes(): JSX.Element {
   return (
@@ -25,6 +26,7 @@ export function Routes(): JSX.Element {
         <Route path="/admin/edit-car" element={<EditCar />} />
         <Route path="/admin/edit-user" element={<EditUser />} />
         <Route path="/admin/list" element={<ListData />} />
+        <Route path="/admin/view-cars" element={<ViewCars />} />
       </Router>
     </BrowserRouter>
   );
